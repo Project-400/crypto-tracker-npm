@@ -1,0 +1,28 @@
+{
+  "name": "@org/repo",
+  "version": "1.0.0",
+  "description": "Common types & interfaces",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Charles",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": { }
+}
