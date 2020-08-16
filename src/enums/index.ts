@@ -4,3 +4,10 @@ export enum TradingBotState {
     PAUSED, // Sold currency due to drop in price - Holding out until price increases
     FINISHED // Bot has exited currency trading due to loss or decreasing price
 }
+
+export enum PositionState {
+    BUY = 'BUY',
+    HOLD = 'HOLD',
+    SELL = 'SELL',
+    SOLD = 'SOLD'
+}

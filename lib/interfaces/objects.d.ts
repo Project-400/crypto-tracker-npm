@@ -1,16 +1,14 @@
 import { PositionState, TradingBotState } from '../enums';
-
 export interface CryptoTradingBot {
-    symbol: string; // Pair symbol, eg. BTCUSDT
-    quote: string; // Currency being used to buy base, eg. USDT
-    base: string; // Currency being bought, eg. BTC
-    spendLimit: number; // Limited amount of quote currency to use
-    isSpendLimited: boolean; // Is the bot limited to spendLimit
-    currentSpend: number; // Current amount of quote currency being used
-    profits: number; // Total profits / loss in quote currency
-    state: TradingBotState; // Current state of bot
+    symbol: string;
+    quote: string;
+    base: string;
+    spendLimit: number;
+    isSpendLimited: boolean;
+    currentSpend: number;
+    profits: number;
+    state: TradingBotState;
 }
-
 export interface ExchangeInfoSymbol {
     symbol: string;
     status: string;
@@ -27,7 +25,6 @@ export interface ExchangeInfoSymbol {
     filters: any[];
     permissions: string[];
 }
-
 export interface ISymbolTraderData {
     symbol: string;
     base: string;
@@ -49,11 +46,9 @@ export interface ISymbolTraderData {
         createdAt: Date | string;
         finishedAt?: Date | string;
         savedAt?: Date | string;
-    }
+    };
 }
-
 export interface TransactionFillCommission {
     commission: number;
     commissionAsset: string;
 }
-
