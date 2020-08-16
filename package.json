@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/CharlesPeterMcCarthy/crypto-tracker-npm.git"
   },
   "author": "Charles",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/CharlesPeterMcCarthy/crypto-tracker-npm/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/CharlesPeterMcCarthy/crypto-tracker-npm#readme",
   "devDependencies": {
     "typescript": "^3.6.3"
   },
