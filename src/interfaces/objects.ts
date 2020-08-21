@@ -1,4 +1,4 @@
-import { PositionState, TradingBotState } from '../enums';
+import {PositionState, SymbolType, TradingBotState} from '../enums';
 
 export interface CryptoTradingBot {
     symbol: string; // Pair symbol, eg. BTCUSDT
@@ -33,9 +33,11 @@ export interface ISymbolTraderData {
     base: string;
     quote: string;
     lowercaseSymbol: string;
-    baseQty: number;
-    quoteQty: number;
-    profit: number;
+    baseQty: number; // Current / leftover
+    baseInitialQty: number; // Amount bought
+    quoteQty: number; // Quote spent / Profits (Quote only, not including minus commission from base - after complete)
+    quoteQtySpent: number;
+    profit: number; // Remove base from quoteQty (convert to calculate)
     startPrice: number;
     currentPrice: number;
     priceDifference: number;
@@ -45,6 +47,10 @@ export interface ISymbolTraderData {
     exchangeInfo?: ExchangeInfoSymbol;
     baseMinQty: number;
     baseStepSize: number;
+    highestPriceReached: number;
+    lowestPriceReached: number;
+    percentageDroppedFromHigh: number;
+    symbolType: SymbolType;
     times: {
         createdAt: Date | string;
         finishedAt?: Date | string;

@@ -1,4 +1,4 @@
-import { PositionState, TradingBotState } from '../enums';
+import { PositionState, SymbolType, TradingBotState } from '../enums';
 export interface CryptoTradingBot {
     symbol: string;
     quote: string;
@@ -31,7 +31,9 @@ export interface ISymbolTraderData {
     quote: string;
     lowercaseSymbol: string;
     baseQty: number;
+    baseInitialQty: number;
     quoteQty: number;
+    quoteQtySpent: number;
     profit: number;
     startPrice: number;
     currentPrice: number;
@@ -42,6 +44,10 @@ export interface ISymbolTraderData {
     exchangeInfo?: ExchangeInfoSymbol;
     baseMinQty: number;
     baseStepSize: number;
+    highestPriceReached: number;
+    lowestPriceReached: number;
+    percentageDroppedFromHigh: number;
+    symbolType: SymbolType;
     times: {
         createdAt: Date | string;
         finishedAt?: Date | string;

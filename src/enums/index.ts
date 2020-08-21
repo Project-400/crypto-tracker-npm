@@ -9,5 +9,14 @@ export enum PositionState {
     BUY = 'BUY',
     HOLD = 'HOLD',
     SELL = 'SELL',
-    SOLD = 'SOLD'
+    SOLD = 'SOLD',
+    TIMEOUT_SELL = 'TIMEOUT_SELL'
+}
+
+export enum SymbolType {
+    NONE = 'NONE',
+    CLIMBER = 'CLIMBER',
+    LEAPER = 'LEAPER',
+    HIGHEST_GAINER = 'HIGHEST_GAINER',
+    AVERAGE_GAINER = 'AVERAGE_GAINER'
 }
