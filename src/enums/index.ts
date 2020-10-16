@@ -18,5 +18,16 @@ export enum SymbolType {
     CLIMBER = 'CLIMBER',
     LEAPER = 'LEAPER',
     HIGHEST_GAINER = 'HIGHEST_GAINER',
-    AVERAGE_GAINER = 'AVERAGE_GAINER'
+    AVERAGE_GAINER = 'AVERAGE_GAINER',
+    LONG_TRADE = 'LONG_TRADE'
+}
+
+export enum LongTradeBotState {
+    GATHERING_DATA = 'GATHERING_DATA',
+    EVALUATING = 'EVALUATING',
+    WAIT = 'WAIT', // Sold currency, waiting to buy
+    BUY = 'BUY',
+    SELL = 'SELL',
+    HOLD = 'HOLD', // Holding currency
+    ABANDON = 'ABANDON'
 }

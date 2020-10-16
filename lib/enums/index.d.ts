@@ -16,5 +16,15 @@ export declare enum SymbolType {
     CLIMBER = "CLIMBER",
     LEAPER = "LEAPER",
     HIGHEST_GAINER = "HIGHEST_GAINER",
-    AVERAGE_GAINER = "AVERAGE_GAINER"
+    AVERAGE_GAINER = "AVERAGE_GAINER",
+    LONG_TRADE = "LONG_TRADE"
+}
+export declare enum LongTradeBotState {
+    GATHERING_DATA = "GATHERING_DATA",
+    EVALUATING = "EVALUATING",
+    WAIT = "WAIT",
+    BUY = "BUY",
+    SELL = "SELL",
+    HOLD = "HOLD",
+    ABANDON = "ABANDON"
 }

@@ -63,3 +63,18 @@ export interface TransactionFillCommission {
     commissionAsset: string;
 }
 
+export interface Trade {
+    symbol: string;
+    id: number;
+    orderId: number;
+    orderListId: number;
+    price: number;
+    qty: number;
+    quoteQty: number;
+    commission: number;
+    commissionAsset: string;
+    time: number;
+    isBuyer: boolean;
+    isMaker: boolean;
+    isBestMatch: boolean;
+}
