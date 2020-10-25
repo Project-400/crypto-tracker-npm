@@ -27,6 +27,10 @@ export interface ExchangeInfoSymbol {
     isMarginTradingAllowed: boolean;
     filters: any[];
     permissions: string[];
+    times: {
+        createdAt: string;
+        updatedAt: string;
+    }
 }
 
 export interface ITraderBotLogData extends DBItem { // Previously ISymbolTraderData
@@ -57,9 +61,9 @@ export interface ITraderBotLogData extends DBItem { // Previously ISymbolTraderD
     percentageDroppedFromHigh: number;
     symbolType: SymbolType;
     times: {
-        createdAt: Date | string;
-        finishedAt?: Date | string;
-        savedAt?: Date | string;
+        createdAt: string;
+        finishedAt?: string;
+        savedAt?: string;
     }
     userId?: string;
 }

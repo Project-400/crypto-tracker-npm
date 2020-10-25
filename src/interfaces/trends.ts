@@ -22,6 +22,6 @@ export interface PriceBatch {
     prices: PairPrice[];
     quote: string;
     times: {
-        createdAt: Date | string;
+        createdAt: string;
     };
 }
