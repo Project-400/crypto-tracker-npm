@@ -1,4 +1,5 @@
-import {PositionState, SymbolType, TradingBotState} from '../enums';
+import { PositionState, SymbolType, TradingBotState } from '../enums';
+import { DBItem } from './db';
 
 export interface CryptoTradingBot {
     symbol: string; // Pair symbol, eg. BTCUSDT
@@ -28,7 +29,11 @@ export interface ExchangeInfoSymbol {
     permissions: string[];
 }
 
-export interface ISymbolTraderData {
+export interface ITraderBotLogData extends DBItem { // Previously ISymbolTraderData
+    bot: {
+        botId: string;
+        createdAt: string;
+    };
     symbol: string;
     base: string;
     quote: string;
@@ -56,6 +61,7 @@ export interface ISymbolTraderData {
         finishedAt?: Date | string;
         savedAt?: Date | string;
     }
+    userId?: string;
 }
 
 export interface TransactionFillCommission {
