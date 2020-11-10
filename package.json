@@ -1,12 +1,13 @@
 {
   "name": "@crypto-tracker/common-types",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Common types & interfaces",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "pub": "publish --access public"
   },
   "repository": {
     "type": "git",

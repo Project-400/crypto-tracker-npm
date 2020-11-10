@@ -1,8 +1,8 @@
 export declare enum TradingBotState {
-    WAITING = 0,
-    TRADING = 1,
-    PAUSED = 2,
-    FINISHED = 3
+    WAITING = "WAITING",
+    TRADING = "TRADING",
+    PAUSED = "PAUSED",
+    FINISHED = "FINISHED"
 }
 export declare enum PositionState {
     BUY = "BUY",
