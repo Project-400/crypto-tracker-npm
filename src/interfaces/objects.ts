@@ -68,6 +68,36 @@ export interface ITraderBotLogData extends DBItem { // Previously ISymbolTraderD
     userId?: string;
 }
 
+export interface ISymbolTraderData {
+    symbol: string;
+    base: string;
+    quote: string;
+    lowercaseSymbol: string;
+    baseQty: number; // Current / leftover
+    baseInitialQty: number; // Amount bought
+    quoteQty: number; // Quote spent / Profits (Quote only, not including minus commission from base - after complete)
+    quoteQtySpent: number;
+    profit: number; // Remove base from quoteQty (convert to calculate)
+    startPrice: number;
+    currentPrice: number;
+    priceDifference: number;
+    percentageDifference: number;
+    commissions: TransactionFillCommission[];
+    state: PositionState;
+    exchangeInfo?: ExchangeInfoSymbol;
+    baseMinQty: number;
+    baseStepSize: number;
+    highestPriceReached: number;
+    lowestPriceReached: number;
+    percentageDroppedFromHigh: number;
+    symbolType: SymbolType;
+    times: {
+        createdAt: Date | string;
+        finishedAt?: Date | string;
+        savedAt?: Date | string;
+    }
+}
+
 export interface TransactionFillCommission {
     commission: number;
     commissionAsset: string;
