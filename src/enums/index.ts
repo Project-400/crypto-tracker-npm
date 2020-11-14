@@ -1,5 +1,6 @@
 export enum TradingBotState {
     WAITING = 'WAITING', // Waiting to trade
+    STARTING = 'STARTING', // Setting up
     TRADING = 'TRADING', // Bot has bought currency and watching for profit / loss
     PAUSED = 'PAUSED', // Sold currency due to drop in price - Holding out until price increases
     FINISHED = 'FINISHED' // Bot has exited currency trading due to loss or decreasing price

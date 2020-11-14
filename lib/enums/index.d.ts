@@ -1,5 +1,6 @@
 export declare enum TradingBotState {
     WAITING = "WAITING",
+    STARTING = "STARTING",
     TRADING = "TRADING",
     PAUSED = "PAUSED",
     FINISHED = "FINISHED"

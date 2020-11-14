@@ -86,7 +86,6 @@ export interface ISymbolTraderData {
     highestPriceReached: number;
     lowestPriceReached: number;
     percentageDroppedFromHigh: number;
-    symbolType: SymbolType;
     times: {
         createdAt: Date | string;
         finishedAt?: Date | string;
