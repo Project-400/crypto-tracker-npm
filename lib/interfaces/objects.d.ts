@@ -1,4 +1,4 @@
-import { PositionState, SymbolType, TradingBotState } from '../enums';
+import { ExchangeInfoFilterType, PositionState, SymbolType, TradingBotState } from '../enums';
 import { DBItem } from './db';
 export interface CryptoTradingBot {
     symbol: string;
@@ -10,7 +10,26 @@ export interface CryptoTradingBot {
     profits: number;
     state: TradingBotState;
 }
-export interface ExchangeInfoSymbol {
+export interface ExchangeInfoFilter {
+    filterType: ExchangeInfoFilterType;
+    minPrice?: string;
+    maxPrice?: string;
+    tickSize?: string;
+    multiplierUp?: string;
+    multiplierDown?: string;
+    avgPriceMins?: number;
+    minQty?: string;
+    maxQty?: string;
+    stepSize?: string;
+    minNotional?: string;
+    applyToMarket?: boolean;
+    limit?: number;
+    maxNumOrders?: number;
+    maxNumAlgoOrders?: number;
+    maxNumIcebergOrders?: number;
+    maxPosition?: string;
+}
+export interface ExchangeInfoSymbol extends DBItem {
     symbol: string;
     status: string;
     baseAsset: string;
@@ -23,7 +42,7 @@ export interface ExchangeInfoSymbol {
     ocoAllowed: boolean;
     isSpotTradingAllowed: boolean;
     isMarginTradingAllowed: boolean;
-    filters: any[];
+    filters: ExchangeInfoFilter[];
     permissions: string[];
     times: {
         createdAt: string;
@@ -48,7 +67,7 @@ export interface ITraderBotLogData extends DBItem {
     currentPrice: number;
     priceDifference: number;
     percentageDifference: number;
-    commissions: TransactionFillCommission[];
+    commissions: TransactionFill[];
     state: PositionState;
     exchangeInfo?: ExchangeInfoSymbol;
     baseMinQty: number;
@@ -78,7 +97,7 @@ export interface ISymbolTraderData {
     currentPrice: number;
     priceDifference: number;
     percentageDifference: number;
-    commissions: TransactionFillCommission[];
+    commissions: TransactionFill[];
     state: PositionState;
     exchangeInfo?: ExchangeInfoSymbol;
     baseMinQty: number;
@@ -92,9 +111,12 @@ export interface ISymbolTraderData {
         savedAt?: Date | string;
     };
 }
-export interface TransactionFillCommission {
-    commission: number;
+export interface TransactionFill {
+    commission: string;
     commissionAsset: string;
+    price: string;
+    qty: string;
+    tradeId: number;
 }
 export interface Trade {
     symbol: string;
