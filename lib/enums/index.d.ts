@@ -1,3 +1,4 @@
+export * from './binance';
 export declare enum TradingBotState {
     WAITING = "WAITING",
     STARTING = "STARTING",
@@ -28,17 +29,4 @@ export declare enum LongTradeBotState {
     SELL = "SELL",
     HOLD = "HOLD",
     ABANDON = "ABANDON"
-}
-export declare enum ExchangeInfoFilterType {
-    PRICE_FILTER = "PRICE_FILTER",
-    PERCENT_PRICE = "PERCENT_PRICE",
-    LOT_SIZE = "LOT_SIZE",
-    MIN_NOTIONAL = "MIN_NOTIONAL",
-    ICEBERG_PARTS = "ICEBERG_PARTS",
-    MAX_NUM_ORDERS = "MAX_NUM_ORDERS",
-    MAX_NUM_ALGO_ORDERS = "MAX_NUM_ALGO_ORDERS",
-    MAX_NUM_ICEBERG_ORDERS = "MAX_NUM_ICEBERG_ORDERS",
-    MAX_POSITION = "MAX_POSITION",
-    EXCHANGE_MAX_NUM_ORDERS = "EXCHANGE_MAX_NUM_ORDERS",
-    EXCHANGE_MAX_ALGO_ORDERS = "EXCHANGE_MAX_ALGO_ORDERS"
 }
