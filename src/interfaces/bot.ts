@@ -5,11 +5,14 @@ export interface CommissionTotals {
 }
 
 export interface IBotTradeData {
+	botId: string;										// The unique Bot ID
 	symbol: string;										// Trading pair symbol, eg. BTCUSDT
 	base: string;										// Base currency (The currency being bought), eg. BTC
 	quote: string;										// Quote currency (The currency being used to spend / trade for the base), eg. USDT
 	startedTrading: boolean;							// Flag to indicate if trading has started (base currency has been bought)
 	finishedTrading: boolean;							// Flag to indicate if trading has ended (base currency has been bought)
+	buyDataSet: boolean;								// Flag to indicate if buy has occurred and data is set
+	sellDataSet: boolean;								// Flag to indicate if sell has occurred and data is set
 	baseQty: number;									// Amount of base currency currently being traded
 	quoteQty: number;									// Amount of quote currency being used to trade with (Limit set by bot)
 	profit: number;										// Current / final amount of profit made (measured in the quote currency)
@@ -41,6 +44,7 @@ export interface IBotTradeData {
 		finishedAt?: string;									// Time trade data finished
 		buyAt?: string;											// Time buy action started
 		sellAt?: string;										// Time sell action started
+		savedAt?: string;										// Time the trade data object was saved in the DB
 		buyTransactionAt?: string;								// Time Binance performed buy transaction
 		sellTransactionAt?: string;								// Time Binance performed sell transaction
 		highestPriceReachedAt?: string;							// Time highest price reached during trade data lifetime
@@ -53,5 +57,6 @@ export interface IBotTradeData {
 	sellTransactionType?: string;						// Sell Transaction type, eg. MARKET
 	sellQty?: string;									// Quantity of the base being sold
 	priceChangeCount: number;							// The amount of times the price updated during the trade
+	preTradePriceChangeCount: number;					// The amount of times the price updated before the trade
 	priceChangeInterval: number; 						// The interval gap between expected price updates
 }

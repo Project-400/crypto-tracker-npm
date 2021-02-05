@@ -1,13 +1,16 @@
-import { TransactionFill } from "./objects";
+import { TransactionFill } from './objects';
 export interface CommissionTotals {
     [symbol: string]: number;
 }
 export interface IBotTradeData {
+    botId: string;
     symbol: string;
     base: string;
     quote: string;
     startedTrading: boolean;
     finishedTrading: boolean;
+    buyDataSet: boolean;
+    sellDataSet: boolean;
     baseQty: number;
     quoteQty: number;
     profit: number;
@@ -39,6 +42,7 @@ export interface IBotTradeData {
         finishedAt?: string;
         buyAt?: string;
         sellAt?: string;
+        savedAt?: string;
         buyTransactionAt?: string;
         sellTransactionAt?: string;
         highestPriceReachedAt?: string;
@@ -51,5 +55,6 @@ export interface IBotTradeData {
     sellTransactionType?: string;
     sellQty?: string;
     priceChangeCount: number;
+    preTradePriceChangeCount: number;
     priceChangeInterval: number;
 }
