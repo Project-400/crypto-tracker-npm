@@ -4,3 +4,4 @@ export * from './trends';
 export * from './db';
 export * from './binance-transactions';
 export * from './bot';
+export * from './wallet-valuation';
