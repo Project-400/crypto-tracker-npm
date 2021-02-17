@@ -1,8 +1,9 @@
+import { DBItem } from './db';
 export interface WalletValue {
     value: string;
     time: string;
 }
-export interface WalletValuation {
+export interface WalletValuation extends DBItem {
     walletValuationId: string;
     userId: string;
     values: WalletValue[];
