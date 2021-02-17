@@ -34,3 +34,9 @@ export enum LongTradeBotState {
     HOLD = 'HOLD', // Holding currency
     ABANDON = 'ABANDON'
 }
+
+export enum VALUE_LOG_INTERVAL {
+    MINUTE = 'MINUTE',
+    HOUR = 'HOUR',
+    DAY = 'DAY'
+}

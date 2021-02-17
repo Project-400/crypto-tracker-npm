@@ -30,3 +30,8 @@ export declare enum LongTradeBotState {
     HOLD = "HOLD",
     ABANDON = "ABANDON"
 }
+export declare enum VALUE_LOG_INTERVAL {
+    MINUTE = "MINUTE",
+    HOUR = "HOUR",
+    DAY = "DAY"
+}
