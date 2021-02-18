@@ -20,6 +20,7 @@ export interface WalletValue extends DBItem {
 }
 export interface KlineValues extends DBItem {
     time: string;
+    updateCount: number;
     open: string;
     close?: string;
     lowest: string;
