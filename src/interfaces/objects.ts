@@ -140,3 +140,11 @@ export interface Trade {
     isMaker: boolean;
     isBestMatch: boolean;
 }
+
+export interface CurrencySuggestion {
+    symbol: string;                 // Currency symbol, eg. CHZBTC
+    suggestionTime: string;         // The time the message containing the suggestion was created
+    expirationTime: string;         // When the suggestion should be disposed and not considered any longer
+    percentageIncrease: number;     // The percentage the currency has increased by in the time period
+    timePeriodAnalysis: string;     // The time period the percentage increase took place. eg. 10 = 10 seconds, 3600 = 1 hour
+}

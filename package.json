@@ -1,6 +1,6 @@
 {
   "name": "@crypto-tracker/common-types",
-  "version": "1.5.2",
+  "version": "1.6.5",
   "description": "Common types & interfaces",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

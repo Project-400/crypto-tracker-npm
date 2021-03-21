@@ -1,9 +1,12 @@
 export * from './binance';
 
 export enum TradingBotState {
-    WAITING = 'WAITING', // Waiting to trade
     STARTING = 'STARTING', // Setting up
+    WAITING = 'WAITING', // Waiting to trade
+    WAITING_TO_REPEAT = 'WAITING_TO_REPEAT', // Bot has finished trading at least once and is ready to trade again
     TRADING = 'TRADING', // Bot has bought currency and watching for profit / loss
+    BETWEEN_TRADES = 'BETWEEN_TRADES', // Bot is repeatedly trading, has sold currency and is waiting to buy again
+    SETTING_UP_TRADE = 'SETTING_UP_TRADE', // Bot is buying or setting up data
     PAUSED = 'PAUSED', // Sold currency due to drop in price - Holding out until price increases
     FINISHED = 'FINISHED' // Bot has exited currency trading due to loss or decreasing price
 }

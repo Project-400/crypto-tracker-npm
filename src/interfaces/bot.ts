@@ -5,6 +5,7 @@ export interface CommissionTotals {
 }
 
 export interface IBotTradeData {
+	tradeDataId: string;								// The unique ID for this instance of trade data
 	botId: string;										// The unique Bot ID
 	symbol: string;										// Trading pair symbol, eg. BTCUSDT
 	base: string;										// Base currency (The currency being bought), eg. BTC

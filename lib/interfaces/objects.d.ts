@@ -133,3 +133,10 @@ export interface Trade {
     isMaker: boolean;
     isBestMatch: boolean;
 }
+export interface CurrencySuggestion {
+    symbol: string;
+    suggestionTime: string;
+    expirationTime: string;
+    percentageIncrease: number;
+    timePeriodAnalysis: string;
+}

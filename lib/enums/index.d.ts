@@ -1,8 +1,11 @@
 export * from './binance';
 export declare enum TradingBotState {
-    WAITING = "WAITING",
     STARTING = "STARTING",
+    WAITING = "WAITING",
+    WAITING_TO_REPEAT = "WAITING_TO_REPEAT",
     TRADING = "TRADING",
+    BETWEEN_TRADES = "BETWEEN_TRADES",
+    SETTING_UP_TRADE = "SETTING_UP_TRADE",
     PAUSED = "PAUSED",
     FINISHED = "FINISHED"
 }

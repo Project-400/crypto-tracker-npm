@@ -3,6 +3,7 @@ export interface CommissionTotals {
     [symbol: string]: number;
 }
 export interface IBotTradeData {
+    tradeDataId: string;
     botId: string;
     symbol: string;
     base: string;
