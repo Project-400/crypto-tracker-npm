@@ -140,3 +140,20 @@ export interface CurrencySuggestion {
     percentageIncrease: number;
     timePeriodAnalysis: string;
 }
+export interface Ec2InstanceDeployment extends DBItem {
+    deploymentId: string;
+    codePipelineJobId: string;
+    appName: string;
+    preBuild: {
+        bucketName: string;
+        objectKey: string;
+    };
+    postBuild: {
+        bucketName: string;
+        objectKey: string;
+    };
+    buildFileLocation: string;
+    times: {
+        createdAt: Date | string;
+    };
+}

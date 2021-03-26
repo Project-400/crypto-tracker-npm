@@ -148,3 +148,21 @@ export interface CurrencySuggestion {
     percentageIncrease: number;     // The percentage the currency has increased by in the time period
     timePeriodAnalysis: string;     // The time period the percentage increase took place. eg. 10 = 10 seconds, 3600 = 1 hour
 }
+
+export interface Ec2InstanceDeployment extends DBItem {
+    deploymentId: string;
+    codePipelineJobId: string;
+    appName: string;
+    preBuild: {
+        bucketName: string;
+        objectKey: string;
+    };
+    postBuild: {
+        bucketName: string;
+        objectKey: string;
+    };
+    buildFileLocation: string;
+    times: {
+        createdAt: Date | string;
+    };
+}
